@@ -32,8 +32,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         menuInicio = new javax.swing.JMenu();
         menuCadastroMedicos = new javax.swing.JMenuItem();
         menuCadastroPacientes = new javax.swing.JMenuItem();
+        listaConsulta = new javax.swing.JMenuItem();
         menuSair = new javax.swing.JMenuItem();
         menuSobre = new javax.swing.JMenu();
+        txtSobreDesc = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("CADASTROS HOSPITAL SANTA ROSÁRIO");
@@ -56,6 +58,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         });
         menuInicio.add(menuCadastroPacientes);
 
+        listaConsulta.setText("Lista Consulta");
+        listaConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                listaConsultaActionPerformed(evt);
+            }
+        });
+        menuInicio.add(listaConsulta);
+
         menuSair.setText("Sair");
         menuSair.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,6 +82,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 menuSobreActionPerformed(evt);
             }
         });
+
+        txtSobreDesc.setText("Sobre");
+        txtSobreDesc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSobreDescActionPerformed(evt);
+            }
+        });
+        menuSobre.add(txtSobreDesc);
+
         jMenuBar1.add(menuSobre);
 
         setJMenuBar(jMenuBar1);
@@ -92,25 +111,31 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuCadastroMedicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastroMedicosActionPerformed
-        // TODO add your handling code here:
         TelaCadastroMedico tela = new TelaCadastroMedico(); // Cria o formulário de Cadastro
         tela.show(); // Exibe o formulário de Cadastro
     }//GEN-LAST:event_menuCadastroMedicosActionPerformed
 
     private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
-        // TODO add your handling code here:
-        System.exit(0);
+         System.exit(0);
     }//GEN-LAST:event_menuSairActionPerformed
 
     private void menuSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSobreActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(rootPane, "Sistema de Cadastro do Hospital Santa Rosário\n Desenvolvido Por Vinicius Soares");
+       
     }//GEN-LAST:event_menuSobreActionPerformed
 
     private void menuCadastroPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastroPacientesActionPerformed
        TelaCadastroPaciente tela = new TelaCadastroPaciente();
        tela.show();
     }//GEN-LAST:event_menuCadastroPacientesActionPerformed
+
+    private void listaConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaConsultaActionPerformed
+       TelaConsulta tela = new TelaConsulta();
+       tela.show();
+    }//GEN-LAST:event_listaConsultaActionPerformed
+
+    private void txtSobreDescActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSobreDescActionPerformed
+         JOptionPane.showMessageDialog(rootPane, "Sistema de Cadastro do Hospital Santa Rosário\n Desenvolvido Por Vinicius Soares");
+    }//GEN-LAST:event_txtSobreDescActionPerformed
 
     /**
      * @param args the command line arguments
@@ -149,10 +174,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem listaConsulta;
     private javax.swing.JMenuItem menuCadastroMedicos;
     private javax.swing.JMenuItem menuCadastroPacientes;
     private javax.swing.JMenu menuInicio;
     private javax.swing.JMenuItem menuSair;
     private javax.swing.JMenu menuSobre;
+    private javax.swing.JMenuItem txtSobreDesc;
     // End of variables declaration//GEN-END:variables
 }

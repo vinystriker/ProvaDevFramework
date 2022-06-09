@@ -8,17 +8,14 @@ package viniciusjs;
  *
  * @author vjsx
  */
-public class MedicoDAO extends Conexao {
+public class ConsultaDAO extends Conexao {
     
-    public String CadastrarMedico (Medico medico)
+    public String CadastrarConsulta (Consulta consulta)
     {
         try
         {
             String sentenca;
-            sentenca = "INSERT INTO medico VALUES (NULL, '" + medico.getNome() 
-                    + "','" + medico.getCpf() 
-                    + "','" + medico.getCrm() +
-                    "','" + medico.getEspecialidade() + "')";
+            sentenca = "INSERT INTO consulta VALUES (NULL, '" + consulta.getConvenio() + "')";
 
             return this.atualizarBanco(sentenca);
         }
@@ -27,5 +24,6 @@ public class MedicoDAO extends Conexao {
             return e.getMessage();
         }
     }
-  
+    
+
 }
