@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package viniciusjs;
-
 /**
  *
  * @author vjsx
@@ -27,5 +26,5 @@ public class MedicoDAO extends Conexao {
             return e.getMessage();
         }
     }
-  
+        
 }

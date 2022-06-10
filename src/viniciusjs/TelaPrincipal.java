@@ -111,8 +111,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuCadastroMedicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuCadastroMedicosActionPerformed
-        TelaCadastroMedico tela = new TelaCadastroMedico(); // Cria o formulário de Cadastro
-        tela.show(); // Exibe o formulário de Cadastro
+        TelaCadastroMedico tela = new TelaCadastroMedico(); 
+        tela.show(); 
     }//GEN-LAST:event_menuCadastroMedicosActionPerformed
 
     private void menuSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuSairActionPerformed
